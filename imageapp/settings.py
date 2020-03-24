@@ -120,15 +120,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # GCS導入
 
-STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
 
 GS_BUCKET_NAME = 'imageapp_ryopenguin'
-
+GS_PROJECT_ID = 'ryopenguin-9f2e7'
+STATIC_URL = 'https://storage.googleapis.com/imageapp_ryopenguin/app1/'
+MEDIA_URL = 'https://storage.googleapis.com/imageapp_ryopenguin/documents/'
 
 GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
     os.path.join(BASE_DIR, 'AUTH_KEY.json'),

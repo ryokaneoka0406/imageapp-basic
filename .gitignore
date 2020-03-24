@@ -1,1 +1,4 @@
-*.json
+__pycache__
+db.sqlite3
+.DS_Store
+AUTH_KEY.json
